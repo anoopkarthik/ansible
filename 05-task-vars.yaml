@@ -3,7 +3,7 @@
   vars: #play level, all tasks in this play have access to this
     COURSE: "DevOps with AWS"
     DURATION: "120HRS"
-    TRAINER: "Sivakumar Reddy"
+    TRAINER: "Sivakumar Reddy" 
   tasks:
   - name: print the information
     ansible.builtin.debug:
