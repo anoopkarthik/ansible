@@ -1,13 +1,13 @@
 - name: variables from prompt
   hosts: web
   vars_prompt:
-  - name: Course
+  - name: COURSE
     prompt: Please enter the course name
     private: false
-  - name: Duration
+  - name: DURATION
     prompt: Please enter the duration
     private: false
-  - name: Trainer
+  - name: TRAINER
     prompt: Please enter the trainer name  
     private: false
   tasks:
