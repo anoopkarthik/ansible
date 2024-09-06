@@ -15,6 +15,6 @@
       ansible.builtin.debug:
         msg: "Hi, I am learning {{COURSE}}, Duration is: {{DURATION}}, Trainer: {{TRAINER}}"
 
-     - name: print the informtion again
-      ansible.builtin.debug:
+     - name: print the informtion again and again
+       ansible.builtin.debug:
         msg: "Hi, I am learning {{COURSE}}, Duration is: {{DURATION}}, Trainer: {{TRAINER}}"
