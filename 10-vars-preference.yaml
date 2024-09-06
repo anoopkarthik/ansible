@@ -16,3 +16,6 @@
       TRAINER: "Sivakumar Reddy"
     ansible.builtin.debug:
       msg: "Hi, I am learning {{COURSE}}"
+
+
+#1. first preference will always be command line or args
