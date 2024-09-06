@@ -5,16 +5,17 @@
     DURATION: "120HRS"
     TRAINER: "Sivakumar Reddy"
   tasks:
-    - name: print the information
-      ansible.builtin.debug:
-          msg: "Hi, I am learning {{COURSE}}, Duration is: {{DURATION}}, Trainer: {{TRAINER}}"
+  - name: print the information
+    ansible.builtin.debug:
+      msg: "Hi, I am learning {{COURSE}}, Duration is: {{DURATION}}, Trainer: {{TRAINER}}"
 
-    - name: print the information again
-      vars: 
-        COURSE: "Ansible"
-      ansible.builtin.debug:
-          msg: "Hi, I am learning {{COURSE}}, Duration is: {{DURATION}}, Trainer: {{TRAINER}}"
+  - name: print the information again
+    vars: #task level variables override play level
+      COURSE: "Ansible"
+    ansible.builtin.debug:
+      msg: "Hi, I am learning {{COURSE}}, Duration is: {{DURATION}}, Trainer: {{TRAINER}}"
 
-    - name: print the information again and again
-       ansible.builtin.debug:
-          msg: "Hi, I am learning {{COURSE}}, Duration is: {{DURATION}}, Trainer: {{TRAINER}}"
+  - name: print the information again
+    ansible.builtin.debug:
+      msg: "Hi, I am learning {{COURSE}}, Duration is: {{DURATION}}, Trainer: {{TRAINER}}"
+
