@@ -8,7 +8,7 @@
   - name: Duration
     prompt: Please enter the duration
     tasks:
-  - name: print the course information
-    ansible.builtin.debug:
-      msg: "Hi, I am learning {{COURSE}}, Duration is: {{DURATION}}, Trainer: {{TRAINER}}"
+    - name: print the course information
+      ansible.builtin.debug:
+        msg: "Hi, I am learning {{COURSE}}, Duration is: {{DURATION}}, Trainer: {{TRAINER}}"
       
