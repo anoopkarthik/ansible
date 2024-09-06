@@ -11,7 +11,7 @@
   tasks:
   - name: print the information
     vars:
-      COURSE: "DevOps with AWS from TASK level"
+      #COURSE: "DevOps with AWS from TASK level"
       DURATION: "120HRS"
       TRAINER: "Sivakumar Reddy"
     ansible.builtin.debug:
@@ -19,3 +19,4 @@
 
 
 #1. first preference will always be command line or args
+#2. TASK level
