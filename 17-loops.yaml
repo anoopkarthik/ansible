@@ -1,8 +1,9 @@
 - name: loops demo
   hosts: web
   connection: local
+  become: yes
   tasks:
-  - name: print names
+  - name: install packages
     ansible.builtin.package:
       name: "{{ item }}"
       state: present
