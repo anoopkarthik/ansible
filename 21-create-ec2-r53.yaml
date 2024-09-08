@@ -25,13 +25,13 @@
     ansible.builtin.debug:
       msg: "{{ ec2_instances }}"
 
-  - name: create route53 records
+  - name: create r53 records
     amazon.aws.route53:
       state: present
-      zone: anoopkarthik.online
+      zone: "{{ zone }}"
       record: "{{ item.item }}.{{ zone }}" #mysql.anoopkarthik.online
       type: A
       ttl: 1
       value: "{{ item.instances[0].private_ip_address }}"
-      wait:true
+      wait: true
     loop: "{{ ec2_instances.results }}"
