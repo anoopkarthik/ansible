@@ -7,7 +7,7 @@
     private: false # not confidential
 - tasks:
   - name: print this if less than 10
-    ansible.buitin.debug:
+    ansible.builtin.debug:
       msg: "Given number {{ number }} is less than 10"
     when: number < 10 # conditional expression
 
