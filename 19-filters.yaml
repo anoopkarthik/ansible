@@ -22,4 +22,4 @@
     vars:
       numbers: [1,2,3,45,4,3,2]
     ansible.builtin.unique:
-      msg: " {{ numbers | unique }}"
+      msg: " {{ numbers | unique }} "
