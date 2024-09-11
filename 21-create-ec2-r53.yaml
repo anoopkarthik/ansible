@@ -2,14 +2,14 @@
   hosts: local
   connection: local
   vars:
-    subnet_id: subnet-0e12e5ef84f2e04c4 #replace with your subnet id
+    subnet_id: subnet-069175c7aa22a1b03 #replace with your subnet id
     sg_id: "sg-068e1a71e5faa8216"
     ami_id: "ami-09c813fb71547fc4f"
     instances:
     - mysql
     - backend
     - frontend
-    zone: anoopkarthik.online
+    # zone: kumarkarti.online
   tasks:
   - name: create ec2 instance
     amazon.aws.ec2_instance:
@@ -25,13 +25,14 @@
     ansible.builtin.debug:
       msg: "{{ ec2_instances }}"
 
-  - name: create r53 records
-    amazon.aws.route53:
-      state: present
-      zone: "{{ zone }}"
-      record: "{{ item.item }}.{{ zone }}" #mysql.anoopkarthik.online
-      type: A
-      ttl: 1
-      value: "{{ item.instances[0].private_ip_address }}"
-      wait: true
-    loop: "{{ ec2_instances.results }}"
+  # - name: create r53 records
+  #   amazon.aws.route53:
+  #     state: present
+  #     zone: "{{ zone }}"
+  #     record: "{{ item.item }}.{{ zone }}" #mysql.kumarkarti.online
+  #     type: A
+  #     ttl: 1
+  #     value: "{{ item.instances[0].private_ip_address }}"
+  #     wait: true
+  #   loop: "{{ ec2_instances.results }}"
+

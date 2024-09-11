@@ -22,8 +22,8 @@
 
 #1. first preference will always be command line or args
 #2. TASK level
-#3.Files
-#4 Prompt level
+#3. Files
+#4  Prompt level
 #5. PLAY Level
 #6. Inventory level
 
